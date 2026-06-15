@@ -2,7 +2,6 @@
     --bs-tertiary-bg-rgb: 255, 255, 150;
 }
 
-
 /* needed for interactive map in listplace.xsl */
 div#map {
     height: 50vh;
@@ -18,7 +17,6 @@ div#map {
     text-decoration: underline dotted;
     cursor: pointer;
 }
-
 
 a.nav-link {
     font-size: 1.1rem;
@@ -64,14 +62,17 @@ main h2 {
 .meta-container {
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
+    min-height: 80vh;
 }
 
 .meta-container .text-center.p-4 {
     margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-.meta-container p {
+.meta-container > p {
     max-width: 600px;
 }
 
@@ -89,10 +90,15 @@ main h2 {
     text-align: center;
 }
 
-h2 {
-    margin-top: 3rem;
+.home-container h1 {
+    margin-bottom: 0;
 }
 
 .home-container h2 {
     margin-top: 0.2rem;
 }
+
+h2 {
+    margin-top: 3rem;
+}
+
