@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de-AT">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Brief an Karl Kraus</title>
+            <author ref="http://d-nb.info/gnd/">Steckell, Margarete</author>
+            <respStmt>
+               <resp>Transkription und Kodierung</resp>
+               <name>Veronika Heckl</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Derived from METS record. Unveröffentlicht (Forschungstranskript).</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Wienbibliothek im Rathaus</repository>
+                  <idno>H.I.N.-238884</idno>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <title>Brief an Karl Kraus</title>
+                     <author>Steckell, Margarete</author>
+                     <note type="summary">Dank für Zusendung der Fackel Nr. 167</note>
+                     <note type="incipit">Schelten Sie mich zum mindesten unhöflich</note>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>Papier</support>
+                        <extent>2 Blatt, 3 Seiten beschrieben.</extent>
+                        <condition>
+                           <p>Blatt 1 (14,5 x 18 cm): Dunkle Reste eines Klebestreifens am 
+                           linken Rand mittig.</p>
+                           <p>Blatt 2 (18 x 29 cm): Doppelseite, linke Seite unbeschrieben mit 
+                           Stempel der Wiener Stadt- u. Landesbibliothek; dunkle Reste eines 
+                           Klebestreifens oben mittig.</p>
+                           <p>Blatt 3 (14,5 x 18 cm): Stempel der Wienbibliothek unten links 
+                           der Mitte.</p>
+                        </condition>
+                     </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" medium="ink" script="Latn">
+                        <p>Lateinische Schreibschrift, Tinte.</p>
+                     </handNote>
+                  </handDesc>
+                  <additions>
+                     <p>Briefkopf: geprägtes Monogramm (M/S verschlungen) oben links.</p>
+                  </additions>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate when="1904-11-04">4. November 1904</origDate>
+                     <origPlace key="geonames:2950159" ref="https://www.geonames.org/2950159">Berlin</origPlace>
+                  </origin>
+               </history>
+            </msDesc>
+            <bibl>
+               <idno type="objid">5429274</idno>
+               <idno type="local">9910709454004516</idno>
+               <idno type="urn">urn:nbn:at:AT-WBR-1708589</idno>
+               <idno type="mets-url">
+                  https://www.digital.wienbibliothek.at/wbrobv02/oai/?verb=GetRecord&amp;metadataPrefix=mets&amp;identifier=5429274</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName>Steckell, Margarete</persName>
+               <placeName key="geonames:2950159" ref="https://www.geonames.org/2950159">Berlin</placeName>
+               <date when="1904-11-04" />
+            </correspAction>
+            <correspAction type="received">
+               <persName key="gnd:118566288" ref="http://d-nb.info/gnd/118566288">Kraus, Karl</persName>
+            </correspAction>
+         </correspDesc>
+         <langUsage>
+            <language ident="de-AT">Deutsch (Österreich)</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-05-18">Erstfassung der TEI-Kodierung</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="surf-IMG_DEFAULT_5429275">
+         <desc>[Seite 1]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5429275/full/full/0/default.jpg" />
+      </surface>
+      <surface xml:id="surf-IMG_DEFAULT_5429276">
+         <desc>[Seite 2, Doppelseite: links unbeschrieben, rechts beschrieben]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5429276/full/full/0/default.jpg" />
+      </surface>
+      <surface xml:id="surf-IMG_DEFAULT_5429277">
+         <desc>[Seite 3]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5429277/full/full/0/default.jpg" />
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="letter">
+
+            <!-- SEITE 1 -->
+            <pb facs="#surf-IMG_DEFAULT_5429275" n="1" />
+            <fw type="shelfmark" place="top-left">H.I.N 258.884</fw>
+            <fw type="num" place="top-right">15</fw>
+            <opener>
+               <fw type="letterhead" place="top-left" rend="monogram">
+                  <unclear reason="illegible">MS</unclear>
+               </fw>
+               <dateline rend="right">Berlin, den 4. Novb. 1904</dateline>
+               <salute type="initial">Sehr geehrter Herr Kraus</salute>
+            </opener>
+            <p rend="indent">
+               <lb n="1"/>Schelten Sie mich zum
+               <lb n="2"/>mindesten unhöflich, dass ich noch
+               <lb n="3"/>nicht die Zeit gefunden habe Ihnen
+               <lb n="4"/>für Ihre liebenswürdige Uebersendung
+               <lb n="5"/>der „Fackel" zu danken, aber man
+               <lb n="6"/>hängt ja als Sklave des Lebens von
+               <lb n="7"/>so vielen Kleinigkeiten ab und
+               <lb n="8"/>nicht zu wenig von seiner eigenen
+               <lb n="9"/>Trägheit, denn Zeitmangel kann
+            </p>
+
+            <!-- SEITE 2 -->
+            <pb facs="#surf-IMG_DEFAULT_5429276" n="2" />
+            <note type="physDesc" place="left">Linke Seite der Doppelseite unbeschrieben;
+               Stempel der Wiener Stadt- u. Landesbibliothek.</note>
+            <p>
+               <lb n="1"/>mich kaum entschuldigen, obwohl ich
+               <lb n="2"/>viel zu tun hatte. Heut nach dieser
+               <lb n="3"/>meiner offenen Abbitte erhalte ich
+               <lb n="4"/>gewiss auch die erbetene Absolution
+               <lb n="5"/>in Gestalt des nächst erscheinenden
+               <lb n="6"/>Heftes? –
+            </p>
+            <p>
+               <lb n="7"/>„Ist Harden noch immer beleidigt?"
+               <lb n="8"/>fragt jetzt eine Neugierige. Seinen Artikel
+               <lb n="9"/>über Südwestafrika finde ich sehr der
+               <lb n="10"/>allgemeinen Ansicht entsprechend. –
+            </p>
+            <p>
+               <lb n="11"/>Frank Wedekinds „Lied vom armen Kind"
+               <lb n="12"/>hat mir sehr gefallen. Es liegt ein
+            </p>
+
+            <!-- SEITE 3 -->
+            <pb facs="#surf-IMG_DEFAULT_5429277" n="3" />
+            <p>
+               <lb n="1"/><subst>
+                  <del rend="overwritten"><unclear reason="illegible">sa</unclear></del>
+                  <add place="over">sa</add>
+               </subst>tirischer Humor darin, der so fein
+               <lb n="2"/>und treffend unsere Zeit zeichnet.
+            </p>
+            <p>
+               <lb n="3"/>Und nun noch eine Frage: Haben Sie nicht
+               <lb n="4"/>so manchen Strauss privatim anzufechten,
+               <lb n="5"/>mit denen, die Sie in Ihrer Schrift an
+               <lb n="6"/>greifen? Z.B. Herr <unclear reason="illegible">Granichstaedten</unclear> steckt doch
+               <lb n="7"/>nicht schweigend Ihre Kritik ein oder doch?
+            </p>
+            <p>
+               <lb n="8"/>Hoffentlich habe ich bald einmal wieder
+               <lb n="9"/>das Vergnügen Sie bei mir begrüssen
+               <lb n="10"/>zu können um die leider nur so kurze
+               <lb n="11"/>Bekanntschaft aufzufrischen. Bitte grüssen
+               <lb n="12"/>Sie <unclear reason="illegible">Luhr's</unclear> bestens.
+            </p>
+            <closer>
+               <salute type="closing">Mit nochmaligem Dank und bestem Gruss</salute>
+               <salute rend="indent">Ihre</salute>
+               <signed>Margarete Steckell</signed>
+            </closer>
+
+         </div>
+      </body>
+   </text>
+</TEI>

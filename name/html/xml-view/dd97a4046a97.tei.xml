@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de-AT">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Brief an Karl Kraus</title>
+            <author key="gnd:1037152204" ref="http://d-nb.info/gnd/1037152204">Cleve, Henriette von</author>
+            <respStmt>
+               <resp>Transkription und Kodierung</resp>
+               <name>Veronika Heckl</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Derived from METS record. Unveröffentlicht (Forschungstranskript).</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Wienbibliothek im Rathaus</repository>
+                  <idno>H.I.N.-238928</idno>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <title>Brief an Karl Kraus</title>
+                     <author>Cleve, Henriette von</author>
+                     <note type="summary">Über ihre täglichen Gedanken an Kraus und seinen „Zustand"</note>
+                     <note type="incipit">ich sende Ihnen unendlich viele Grüße aus dem alten
+                        Mondsee</note>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc form="leaf">
+                     <supportDesc>
+                        <support>Papier</support>
+                        <extent>1 Blatt, 1 Seite beschrieben, Rückseite unbeschrieben.</extent>
+                        <condition>
+                           <p>Faltspuren: einmal quer und einmal längs in der Mitte gefaltet.
+                           Rückseite mit Stempel der Wiener Stadt- u. Landesbibliothek, 
+                           der leicht auf die Vorderseite durchscheint.</p>
+                        </condition>
+                     </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" medium="ink" script="Latn">
+                        <p>Lateinische Schreibschrift, Tinte.</p>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate when="1934-07-18">18. Juli 1934</origDate>
+                     <origPlace key="geonames:2771706" ref="https://www.geonames.org/2771706">Mondsee,
+                        Oberösterreich</origPlace>
+                  </origin>
+               </history>
+            </msDesc>
+            <bibl>
+               <idno type="objid">3524824</idno>
+               <idno type="local">9910709923404516</idno>
+               <idno type="urn">urn:nbn:at:AT-WBR-376413</idno>
+               <idno type="mets-url">
+                  https://www.digital.wienbibliothek.at/wbrobv02/oai/?verb=GetRecord&amp;metadataPrefix=mets&amp;identifier=3524824</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName key="gnd:1037152204" ref="http://d-nb.info/gnd/1037152204">Cleve, Henriette
+                  von</persName>
+               <placeName>Mondsee, Oberösterreich</placeName>
+               <date when="1934-07-18" />
+            </correspAction>
+            <correspAction type="received">
+               <persName key="gnd:118566288" ref="http://d-nb.info/gnd/118566288">Kraus, Karl</persName>
+            </correspAction>
+         </correspDesc>
+         <langUsage>
+            <language ident="de-AT">Deutsch (Österreich)</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-05-18">Erstfassung der TEI-Kodierung</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="surf-IMG_DEFAULT_3924219">
+         <desc>[Seite 1, Vorderseite]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/3924219/full/full/0/default.jpg" />
+      </surface>
+      <surface xml:id="surf-IMG_DEFAULT_3924220">
+         <desc>[Seite 2, Rückseite, unbeschrieben]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/3924220/full/full/0/default.jpg" />
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="letter">
+            <pb facs="#surf-IMG_DEFAULT_3924219" n="1" />
+            <fw type="shelfmark" place="top-left">H.I.N. 238.928</fw>
+            <fw type="num" place="top-right" rend="red">11</fw>
+            <opener>
+               <dateline rend="right">18. VII. Juli 34.</dateline>
+               <salute type="initial">Verehrter, lieber Herr Kraus,</salute>
+            </opener>
+            <p rend="indent">
+               <lb n="1"/>ich sende Ihnen unendlich viele Grüße
+               <lb n="2"/>aus dem alten Mondsee! Ich bin sehr glücklich
+               <lb n="3"/>hier und genieße die Ruhe und Stille, die ich so
+               <lb n="4"/>lange entbehren musste. Erst hier merke ich, wie
+               <lb n="5"/>kaputt ich bin.
+            </p>
+            <p rend="indent">
+               <lb n="6"/>Ich denke mit so viel Liebe und Sorge an Sie.
+               <lb n="7"/>Mein erster Gedanken täglich ist der, wie es Ihnen wohl
+               <lb n="8"/>gehen mag, ob sich Ihr Zustand schon gebessert hat
+               <lb n="9"/>und ob Sie bald verreisen werden. Glauben Sie mir:
+               <lb n="10"/>ich bin nie auch nur mit einem Gedanken von Ihnen
+               <lb n="11"/>entfernt gewesen, ich liebe Sie sehr.
+            </p>
+            <closer>
+               <salute rend="indent">Alles erdenklich Gute von Ihrer alten</salute>
+               <signed>
+                  <hi rend="underline">Cleve</hi>
+               </signed>
+               <dateline>Mondsee, Oberösterreich.</dateline>
+            </closer>
+            <pb facs="#surf-IMG_DEFAULT_3924220" n="2" />
+            <note type="stamp" place="center">Stempel: Wiener Stadt- u. Landesbibliothek</note>
+         </div>
+      </body>
+   </text>
+</TEI>

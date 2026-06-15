@@ -26,19 +26,15 @@
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
-    <xslt in="${index}" out="${target}/search.html" style="./xslt/search.xsl">
+    <!-- <xslt in="${index}" out="${target}/search.html" style="./xslt/search.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="${index}" out="${target}/noske-search.html" style="./xslt/noske-search.xsl">
+    </xslt>  -->
+    <!-- <xslt in="./data/imprint.xml" out="${target}/imprint.html" style="./xslt/imprint.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="./data/imprint.xml" out="${target}/imprint.html" style="./xslt/imprint.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="./data/indices/listperson.xml" out="${target}/listperson.html" style="./xslt/listperson.xsl">
+    </xslt> -->
+    <!-- <xslt in="./data/indices/listperson.xml" out="${target}/listperson.html" style="./xslt/listperson.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
     </xslt>
@@ -53,15 +49,11 @@
     <xslt in="./data/indices/listbibl.xml" out="${target}/listbibl.html" style="./xslt/listbibl.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="./data/indices/listperson.xml" out="${target}/beacon.txt" style="./xslt/beacon.xsl">
+    </xslt> -->
+    <!-- <xslt in="./data/indices/listperson.xml" out="${target}/beacon.txt" style="./xslt/beacon.xsl">
         <factory name="net.sf.saxon.TransformerFactoryImpl"/>
         <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
-    <xslt in="./data/imprint.xml" out="${target}/api.xml" style="./xslt/api.xsl">
-        <factory name="net.sf.saxon.TransformerFactoryImpl"/>
-        <classpath location="${basedir}/saxon/saxon9he.jar"/>
-    </xslt>
+    </xslt> -->
     <replace dir="${target}" value="">
         <include name="*.html"/>
         <replacetoken> xmlns=""</replacetoken>
@@ -75,7 +67,7 @@
         <include name="*.html"/>
         <replacetoken>xmlns="http://www.w3.org/1999/xhtml"</replacetoken>
     </replace>
-    <copy todir="${target}" flatten="true">
+    <copy todir="${target_xml}" flatten="true">
         <fileset dir="./data/">
             <include name="**/*.xml"/>
         </fileset>

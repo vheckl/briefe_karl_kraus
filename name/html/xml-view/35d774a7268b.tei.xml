@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de-AT">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Brief an Karl Kraus</title>
+            <author key="gnd:1309366365" ref="http://d-nb.info/gnd/1309366365">Springer, Vally</author>
+            <respStmt>
+               <resp>Transkription und Kodierung</resp>
+               <name>Veronika Heckl</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Derived from METS record. Unveröffentlicht (Forschungstranskript).</p>
+         </publicationStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <repository>Wienbibliothek im Rathaus</repository>
+                  <idno>H.I.N.-238882</idno>
+               </msIdentifier>
+               <msContents>
+                  <msItem>
+                     <title>Brief an Karl Kraus</title>
+                     <author>Springer, Vally</author>
+                     <note type="summary">Dank für ein Kraus-Bild mit Widmung</note>
+                     <note type="incipit">Seit einigen Tagen schon wache ich mit der quälenden
+                        Gewissensmahnung auf</note>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>Papier</support>
+                        <extent>2 Blatt, 3 Seiten beschrieben.</extent>
+                        <condition>
+                           <p>Blatt 1 (Seite 1): Klebestreifen-Reste am linken Rand mittig; 
+                           Stempel der Wiener Stadtbibliothek unten mittig.</p>
+                           <p>Blatt 2 (Seite 2): Doppelseite, Text über beide Hälften; 
+                           Klebestreifen-Reste oben mittig und linke Seite; 
+                           Stempel der Wiener Stadt- u. Landesbibliothek unten mittig.</p>
+                           <p>Blatt 3 (Seite 3): Einzelblatt mit Schluss und Unterschrift; 
+                           leichter Fleck oben mittig.</p>
+                        </condition>
+                     </supportDesc>
+                  </objectDesc>
+                  <handDesc>
+                     <handNote xml:id="h1" medium="ink" script="Latn">
+                        <p>Lateinische Schreibschrift, Tinte.</p>
+                     </handNote>
+                  </handDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate when="1902-04-15">15. April 1902</origDate>
+                     <origPlace key="geonames:2761369" ref="https://www.geonames.org/2761369">Wien</origPlace>
+                  </origin>
+               </history>
+            </msDesc>
+            <bibl>
+               <idno type="objid">5397125</idno>
+               <idno type="local">9910709862604516</idno>
+               <idno type="urn">urn:nbn:at:AT-WBR-1632914</idno>
+               <idno type="mets-url">
+                  https://www.digital.wienbibliothek.at/wbrobv02/oai/?verb=GetRecord&amp;metadataPrefix=mets&amp;identifier=5397125</idno>
+            </bibl>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <correspDesc>
+            <correspAction type="sent">
+               <persName key="gnd:1309366365" ref="http://d-nb.info/gnd/1309366365">Springer, Vally</persName>
+               <placeName key="geonames:2761369" ref="https://www.geonames.org/2761369">Wien</placeName>
+               <date when="1902-04-15" />
+            </correspAction>
+            <correspAction type="received">
+               <persName key="gnd:118566288" ref="http://d-nb.info/gnd/118566288">Kraus, Karl</persName>
+            </correspAction>
+         </correspDesc>
+         <langUsage>
+            <language ident="de-AT">Deutsch (Österreich)</language>
+         </langUsage>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2026-05-18">Erstfassung der TEI-Kodierung</change>
+      </revisionDesc>
+   </teiHeader>
+   <facsimile>
+      <surface xml:id="surf-IMG_DEFAULT_5397126">
+         <desc>[Seite 1]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5397126/full/full/0/default.jpg" />
+      </surface>
+      <surface xml:id="surf-IMG_DEFAULT_5397127">
+         <desc>[Seite 2, Doppelseite]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5397127/full/full/0/default.jpg" />
+      </surface>
+      <surface xml:id="surf-IMG_DEFAULT_5397128">
+         <desc>[Seite 3]</desc>
+         <graphic
+            url="https://www.digital.wienbibliothek.at/i3f/v20/5397128/full/full/0/default.jpg" />
+      </surface>
+   </facsimile>
+   <text>
+      <body>
+         <div type="letter">
+
+            <!-- SEITE 1 -->
+            <pb facs="#surf-IMG_DEFAULT_5397126" n="1" />
+            <fw type="shelfmark" place="top-left">H.I.N. 238.882</fw>
+            <fw type="num" place="top-right">13</fw>
+            <opener>
+               <dateline rend="right">Wien, 15. April 1902.</dateline>
+               <salute>Sehr geehrter Herr,</salute>
+            </opener>
+            <p rend="indent">
+               <lb n="1"/>Seit einigen Tagen schon
+               <lb n="2"/>wache ich mit der quälenden Ge
+               <lb n="3"/>wissensmahnung auf, daß ich Ihnen
+               <lb n="4"/>einen Dankbrief schulde. Mein
+               <lb n="5"/>Respekt vor Ihrem Geiste ist so groß,
+               <lb n="6"/>daß ich mich ganz verschüchtert
+               <lb n="7"/>fühle, während ich die Feder in
+            </p>
+
+            <!-- SEITE 2 -->
+            <pb facs="#surf-IMG_DEFAULT_5397127" n="2" />
+            <p>
+               <lb n="1"/>die Hand nehme, um an Sie zu
+               <lb n="2"/>schreiben. Und da ich meine
+               <lb n="3"/>Scheu ja doch überwinden muss
+               <lb n="4"/>um Ihnen zu danken, so erlaube
+               <lb n="5"/>ich mir einige bescheidene Worte
+               <lb n="6"/>auf das zu erwidern, was Sie
+               <lb n="7"/>mir freundlich auf Ihr Bild
+               <lb n="8"/>geschrieben haben.
+            </p>
+            <p rend="indent">
+               <lb n="9"/>Haben nicht Sie selbst am
+               <lb n="10"/>besten bewiesen, dass wir <unclear reason="illegible">keinen</unclear>
+               <lb n="11"/>Schopenhauer in diesem Punkte
+               <lb n="12"/>nicht mehr Recht geben? Gibt es
+               <lb n="13"/>nicht schon Tausende und Aber
+               <lb n="14"/>tausende, die Ihr Blatt stets mit
+               <lb n="15"/>Ungeduld erwarten und sich an
+               <lb n="16"/>Ihrem <unclear reason="illegible">Witze</unclear>, Ihrer Gerechtigkeits
+               <lb n="17"/>liebe aufrichtig erfreuen? Sie alle
+               <lb n="18"/>sehen kein "Verbrechen", keinen
+               <lb n="19"/>"empörenden Bruch der guten Sit
+               <lb n="20"/>ten und des Anstandes" darin, von
+               <lb n="21"/>Dummheit und Schlechtigkeit zu
+               <lb n="22"/>reden! — — Im Gegenteil!
+            </p>
+
+            <!-- SEITE 3 -->
+            <pb facs="#surf-IMG_DEFAULT_5397128" n="3" />
+            <p rend="indent">
+               <lb n="1"/>Als „Eine für Viele" gestatte
+               <lb n="2"/>ich mir, Ihnen das zu sagen, — —
+               <lb n="3"/>als ob Sie es nicht schon wüßten!! — —
+               <lb n="4"/>und ich danke Ihnen nochmals herzlich
+               <lb n="5"/>für Ihr Bild, das mir stets als Personi
+               <lb n="6"/>fication von Thatkraft und Überzeu
+               <lb n="7"/>gungstreue ein persönlicher <unclear reason="illegible">Ansporn</unclear>
+               <lb n="8"/>sein wird! —
+            </p>
+            <closer>
+               <signed>
+                  <hi rend="underline">Vally Springer</hi>
+               </signed>
+            </closer>
+
+         </div>
+      </body>
+   </text>
+</TEI>

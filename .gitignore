@@ -1,2 +1,3 @@
 .DS_Store
 .DS_Store
+{{cookiecutter.directory_name}}/html/vendor/
