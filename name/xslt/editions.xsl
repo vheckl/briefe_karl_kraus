@@ -116,7 +116,7 @@
                         </div>
                         <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                         <p style="text-align:center;">
-                            <xsl:for-each select=".//tei:note[not(./tei:p)]">
+                            <xsl:for-each select=".//tei:body//tei:note[not(./tei:p)]">
                                 <div class="footnotes">
                                     <xsl:element name="a">
                                         <xsl:attribute name="name">
