@@ -1,0 +1,123 @@
+/* Editionsseite: Text und Faksimile-Viewer nebeneinander. */
+.editions-layout {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+}
+
+/* Die Viewer-Spalte bleibt beim Scrollen oben angeheftet. */
+.editions-viewer-col {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+.osd-column {
+    position: static;
+}
+
+/* Sichtbarer OSD-Container links. */
+.osd-viewer {
+    width: 100%;
+    height: min(78vh, 62rem);
+    min-height: 24rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.4rem;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.editions-text-column {
+    overflow-wrap: anywhere;
+}
+
+/* Zusätzlicher Nachlauf, damit am Dokumentende noch sauber gescrollt werden kann. */
+.editions-text-column::after {
+    content: "";
+    display: block;
+    height: var(--text-scroll-tail, 60vh);
+}
+
+/* kleine PB-Marker; diese Punkte werden vom IntersectionObserver beobachtet. */
+.osd-marker {
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0 0.25rem 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+/* Erzwungener Umbruch an PB-Stellen für bessere Lesbarkeit. */
+.pb-break {
+    display: block;
+    height: 0.65rem;
+}
+
+/* Sichtbares PB-Label im Text. */
+.pb {
+    display: inline-block;
+    margin: 0 0.35rem;
+    padding: 0.05rem 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    border-radius: 0.3rem;
+    border: 1px solid #adb5bd;
+    color: #495057;
+    background: #f1f3f5;
+}
+
+/* Hervorhebung des aktuell zum OSD-Bild passenden PB-Markers. */
+.pb.is-active {
+    color: #fff;
+    border-color: #0d6efd;
+    background: #0d6efd;
+}
+
+@media (max-width: 991.98px) {
+    /* Etwas geringere Viewer-Mindesthöhe auf kleineren Geräten. */
+    .osd-viewer {
+        height: 62vh;
+        min-height: 16rem;
+    }
+
+    /* Kompakterer PB-Abstand auf kleinen Viewports. */
+    .pb-break {
+        height: 0.5rem;
+    }
+
+    /* Kürzerer Scroll-Nachlauf auf kleinen Viewports. */
+    .editions-text-column::after {
+        height: var(--text-scroll-tail-mobile, 48vh);
+    }
+}
+
+.editions-text-column div.letter-body {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.editions-text-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.editions-text-column .text-center.p-4 {
+    margin-top: auto;
+}
+
+.editions-layout {
+    gap: 2rem;
+}
+
+.editions-text-column {
+    max-width: 400px;
+}
+
+.editions-text-column div.signed {
+    text-align: right;
+    padding-right: 6rem;
+    margin-bottom: 3rem;
+}

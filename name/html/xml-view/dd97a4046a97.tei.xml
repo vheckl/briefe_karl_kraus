@@ -4,7 +4,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Brief an Karl Kraus</title>
+            <title>Brief von Henriette von Cleve an Karl Kraus, 18. Juli 1934</title>
             <author key="gnd:1037152204" ref="http://d-nb.info/gnd/1037152204">Cleve, Henriette von</author>
             <respStmt>
                <resp>Transkription und Kodierung</resp>
@@ -106,20 +106,18 @@
                <dateline rend="right">18. VII. Juli 34.</dateline>
                <salute type="initial">Verehrter, lieber Herr Kraus,</salute>
             </opener>
-            <p rend="indent">
-               <lb n="1"/>ich sende Ihnen unendlich viele Grüße
-               <lb n="2"/>aus dem alten Mondsee! Ich bin sehr glücklich
-               <lb n="3"/>hier und genieße die Ruhe und Stille, die ich so
-               <lb n="4"/>lange entbehren musste. Erst hier merke ich, wie
-               <lb n="5"/>kaputt ich bin.
+            <p rend="indent">ich sende Ihnen unendlich viele Grüße
+               <lb/>aus dem alten Mondsee! Ich bin sehr glücklich
+               <lb/>hier und genieße die Ruhe und Stille, die ich so
+               <lb/>lange entbehren musste. Erst hier merke ich, wie
+               <lb/>kaputt ich bin.
             </p>
-            <p rend="indent">
-               <lb n="6"/>Ich denke mit so viel Liebe und Sorge an Sie.
-               <lb n="7"/>Mein erster Gedanken täglich ist der, wie es Ihnen wohl
-               <lb n="8"/>gehen mag, ob sich Ihr Zustand schon gebessert hat
-               <lb n="9"/>und ob Sie bald verreisen werden. Glauben Sie mir:
-               <lb n="10"/>ich bin nie auch nur mit einem Gedanken von Ihnen
-               <lb n="11"/>entfernt gewesen, ich liebe Sie sehr.
+            <p rend="indent">Ich denke mit so viel Liebe und Sorge an Sie.
+               <lb/>Mein erster Gedanken täglich ist der, wie es Ihnen wohl
+               <lb/>gehen mag, ob sich Ihr Zustand schon gebessert hat
+               <lb/>und ob Sie bald verreisen werden. Glauben Sie mir:
+               <lb/>ich bin nie auch nur mit einem Gedanken von Ihnen
+               <lb/>entfernt gewesen, ich liebe Sie sehr.
             </p>
             <closer>
                <salute rend="indent">Alles erdenklich Gute von Ihrer alten</salute>
@@ -129,7 +127,6 @@
                <dateline>Mondsee, Oberösterreich.</dateline>
             </closer>
             <pb facs="#surf-IMG_DEFAULT_3924220" n="2" />
-            <note type="stamp" place="center">Stempel: Wiener Stadt- u. Landesbibliothek</note>
          </div>
       </body>
    </text>

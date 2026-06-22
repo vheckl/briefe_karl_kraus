@@ -15,59 +15,42 @@
     <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="yes"
         omit-xml-declaration="yes" />
 
-    <xsl:variable name="prev">
-        <xsl:value-of select="replace(tokenize(data(tei:TEI/@prev), '/')[last()], '.xml', '.html')" />
-    </xsl:variable>
-    <xsl:variable name="next">
-        <xsl:value-of select="replace(tokenize(data(tei:TEI/@next), '/')[last()], '.xml', '.html')" />
-    </xsl:variable>
-    <xsl:variable name="teiSource">
-        <xsl:value-of select="data(tei:TEI/@xml:id)" />
-    </xsl:variable>
-    <xsl:variable name="link">
-        <xsl:value-of select="replace($teiSource, '.xml', '.html')" />
-    </xsl:variable>
-    <xsl:variable name="doc_title">
-        <xsl:value-of select=".//tei:titleStmt/tei:title[1]/text()" />
-    </xsl:variable>
-
-
     <xsl:template match="/">
+        <xsl:variable name="prev"
+            select="replace(tokenize(data(tei:TEI/@prev), '/')[last()], '.xml', '.html')" />
+        <xsl:variable name="next"
+            select="replace(tokenize(data(tei:TEI/@next), '/')[last()], '.xml', '.html')" />
+        <xsl:variable name="teiSource">
+            <xsl:choose>
+                <xsl:when
+                    test="normalize-space(data(tei:TEI/@xml:id)) and matches(data(tei:TEI/@xml:id), '\.xml$')">
+                    <xsl:value-of select="data(tei:TEI/@xml:id)" />
+                </xsl:when>
+                <xsl:when test="normalize-space(data(tei:TEI/@xml:id))">
+                    <xsl:value-of select="concat(data(tei:TEI/@xml:id), '.xml')" />
+                </xsl:when>
+                <xsl:otherwise>source.xml</xsl:otherwise>
+            </xsl:choose>
+        </xsl:variable>
+        <xsl:variable name="link" select="replace($teiSource, '\.xml$', '.html')" />
+        <xsl:variable name="doc_title" select=".//tei:titleStmt/tei:title[1]/text()" />
+
         <html class="h-100" lang="{$default_lang}">
             <head>
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
+                <link rel="stylesheet" href="css/editions-osd.css" type="text/css" />
                 <xsl:call-template name="zoterMetaTags">
                     <xsl:with-param name="pageId" select="$link"></xsl:with-param>
                     <xsl:with-param name="zoteroTitle" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
-                <!-- Provide the names of the authors/editors of the current unit, ideally fetched
-                from the data via xslt or hard coded as below -->
                 <meta name="citation_author" content="Foo, Bar" />
                 <meta name="citation_author" content="Bar, Foo" />
             </head>
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar" />
                 <main class="flex-shrink-0 flex-grow-1">
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb"
-                        class="ps-5 p-3">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item">
-                                <a href="index.html">
-                                    <xsl:value-of select="$project_short_title" />
-                                </a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="toc.html">
-                                    <xsl:value-of select="'Inhaltsverzeichnis'" />
-                                </a>
-                            </li>
-                            <li class="breadcrumb-item active" aria-current="page">
-                                <xsl:value-of select="$doc_title" />
-                            </li>
-                        </ol>
-                    </nav>
                     <div class="container">
                         <div class="row">
                             <div class="col-md-2 col-lg-2 col-sm-12 text-start">
@@ -114,46 +97,86 @@
                                 </xsl:if>
                             </div>
                         </div>
-                        <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                        <p style="text-align:center;">
-                            <xsl:for-each select=".//tei:note[not(./tei:p)]">
-                                <div class="footnotes">
-                                    <xsl:element name="a">
-                                        <xsl:attribute name="name">
-                                            <xsl:text>fn</xsl:text>
-                                            <xsl:number level="any" format="1" count="tei:note"/>
-                                        </xsl:attribute>
-                                        <a>
-                                            <xsl:attribute name="href">
-                                                <xsl:text>#fna_</xsl:text>
-                                                <xsl:number level="any" format="1" count="tei:note"/>
-                                            </xsl:attribute>
-                                            <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                                <xsl:number level="any" format="1" count="tei:note"/>
-                                            </span>
-                                        </a>
-                                    </xsl:element>
-                                    <xsl:apply-templates/>
+
+                        <!-- OSD two-column layout -->
+                        <div class="row g-4 editions-layout flex-nowrap">
+                            <!-- Left column: fixed OpenSeadragon viewer -->
+                            <div class="col-5 editions-viewer-col">
+                                <aside class="osd-column">
+                                    <div id="osd-viewer" class="osd-viewer"
+                                        aria-label="Faksimileansicht"></div>
+                                </aside>
+                            </div>
+                            <!-- Right column: TEI text with PB markers -->
+                            <div class="col-7 editions-text-col">
+                                <div class="editions-text-column">
+                                    <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
+                                    <p style="text-align:center;">
+                                        <xsl:for-each select=".//tei:body//tei:note[not(./tei:p)]">
+                                            <div class="footnotes">
+                                                <xsl:element name="a">
+                                                    <xsl:attribute name="name">
+                                                        <xsl:text>fn</xsl:text>
+                                                        <xsl:number level="any" format="1" count="tei:note"/>
+                                                    </xsl:attribute>
+                                                    <a>
+                                                        <xsl:attribute name="href">
+                                                            <xsl:text>#fna_</xsl:text>
+                                                            <xsl:number level="any" format="1" count="tei:note"/>
+                                                        </xsl:attribute>
+                                                        <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
+                                                            <xsl:number level="any" format="1" count="tei:note"/>
+                                                        </span>
+                                                    </a>
+                                                </xsl:element>
+                                                <xsl:apply-templates/>
+                                            </div>
+                                        </xsl:for-each>
+                                    </p>
+
+                                    <xsl:for-each select="//tei:back">
+                                        <div class="tei-back">
+                                            <xsl:apply-templates />
+                                        </div>
+                                    </xsl:for-each>
                                 </div>
-                            </xsl:for-each>
-                        </p>
-
-                        <div class="text-center p-4">
-                            <xsl:call-template name="blockquote">
-                                <xsl:with-param name="pageId" select="$link" />
-                            </xsl:call-template>
+                            </div>
                         </div>
-
                     </div>
-                    <xsl:for-each select="//tei:back">
-                        <div class="tei-back">
-                            <xsl:apply-templates />
-                        </div>
-                    </xsl:for-each>
+                    <div class="text-center p-4">
+                        <xsl:call-template name="blockquote">
+                            <xsl:with-param name="pageId" select="$link" />
+                        </xsl:call-template>
+                    </div>
                 </main>
                 <xsl:call-template name="html_footer" />
-                <script src="vendor/openseadragon-bin-4.1.1/openseadragon.min.js" />
+                <script
+                    src="https://cdn.jsdelivr.net/npm/openseadragon@5.0/build/openseadragon/openseadragon.min.js"></script>
+                <script src="js/editions-osd.js"></script>
             </body>
         </html>
     </xsl:template>
+
+    <!-- PB template with surface-based image lookup -->
+    <xsl:template match="tei:pb">
+        <xsl:variable name="gid" select="replace(@facs, '^#', '')" />
+        <xsl:variable name="image_url"
+            select="string(/tei:TEI/tei:facsimile/tei:surface[@xml:id = $gid]/tei:graphic/@url)" />
+        <xsl:choose>
+            <xsl:when test="normalize-space($image_url)">
+                <span class="pb osd-marker" source="{$gid}" data-osd-facs="{$gid}"
+                    data-osd-image="{$image_url}">
+                    <xsl:value-of select="./@n" />
+                </span>
+                <br class="pb-break" />
+            </xsl:when>
+            <xsl:otherwise>
+                <span class="pb" source="{$gid}">
+                    <xsl:value-of select="./@n" />
+                </span>
+                <br class="pb-break" />
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+
 </xsl:stylesheet>

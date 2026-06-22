@@ -102,3 +102,111 @@ h2 {
     margin-top: 3rem;
 }
 
+/* opener and closer */
+div.opener {
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+div.salute {
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+div.closer {
+    margin-top: 1rem;
+    font-style: italic;
+}
+
+div.signed {
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+/* underlined signature */
+span.underline {
+    text-decoration: underline;
+}
+
+/* archive shelfmarks - visually de-emphasised */
+span.fw {
+    color: #999999;
+    font-size: 0.8rem;
+    display: block;
+}
+
+p.indent {
+    text-indent: 2em;
+}
+
+
+div.footnotes {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.3rem;
+}
+
+div.closer div.salute {
+    text-indent: 2em;
+}
+
+div.signed {
+    text-align: right;
+}
+
+div.dateline {
+    text-align: left;
+    font-style: italic;
+}
+
+div.dateline-right {
+    text-align: right;
+    font-style: italic;
+}
+
+span.fw.num {
+    display: block;
+    text-align: right;
+}
+
+.pb.osd-marker {
+    font-size: 0;
+}
+
+.editions-text-column div.signed,
+.editions-text-column div.dateline-right {
+    padding-right: 0;
+    text-align: right;
+}
+
+.editions-text-column .dateline-right {
+    text-align: right;
+    width: 100%;
+}
+
+.editions-text-column .signed {
+    text-align: right;
+    width: 100%;
+}
+
+.editions-text-column .fw.num {
+    text-align: right;
+    width: 100%;
+    display: block;
+}
+
+.editions-text-column div.letter-body {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.editions-text-column div.signed, .editions-text-column div.dateline-right {
+    padding-right: 0;
+    text-align: right;
+    margin-bottom: 2rem;
+}
