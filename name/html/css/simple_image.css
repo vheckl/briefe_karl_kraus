@@ -1,0 +1,39 @@
+/* Grundlayout fuer direkt eingebettete PB-Bilder im Lesetext. */
+div.main-text {
+  max-width: 88rem;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 4px solid #ddd;
+}
+
+/* Größere Textabschnitte werden als eigene Blöcke voneinander getrennt. */
+div.main-text > div {
+  display: flow-root;
+  margin-bottom: 2rem;
+}
+
+/* Direkt eingebettetes Seitenbild mit Abstand zum umgebenden Text. */
+.pb-image-wrap {
+  display: block;
+  margin: 2rem auto;  /* space around the image */
+  text-align: center;
+}
+
+.pb-image {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 60rem;   /* keep to ~60 chars width using rem while */
+  height: auto;       /* keeping aspect ratio */
+  object-fit: contain;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+}
+
+div.main-text {
+    max-width: 50rem;
+    /*center all content in the main text div, including images*/
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    border-bottom: 4px solid #ddd;
+}

@@ -12,7 +12,6 @@
     <xsl:import href="./partials/html_footer.xsl" />
     <xsl:import href="./partials/blockquote.xsl" />
     <xsl:import href="./partials/zotero.xsl" />
-    <xsl:import href="./partials/simple_images.xsl" />
     <xsl:output encoding="UTF-8" media-type="text/html" method="html" version="5.0" indent="yes"
         omit-xml-declaration="yes" />
 
@@ -36,7 +35,6 @@
     <xsl:template match="/">
         <html class="h-100" lang="{$default_lang}">
             <head>
-                <link rel="stylesheet" href="css/simple_image.css" />
                 <xsl:call-template name="html_head">
                     <xsl:with-param name="html_title" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
@@ -48,7 +46,6 @@
                 from the data via xslt or hard coded as below -->
                 <meta name="citation_author" content="Foo, Bar" />
                 <meta name="citation_author" content="Bar, Foo" />
-
             </head>
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar" />
@@ -83,15 +80,15 @@
                                             title="Zurück zum vorigen Dokument"
                                             visually-hidden="true">
                                             <span class="visually-hidden">Zurück zum vorigen
-        Dokument</span>
+                                                Dokument</span>
                                         </i>
                                     </a>
                                 </xsl:if>
                             </div>
                             <div class="col-md-8 col-lg-8 col-sm-12 text-center">
-                                <h1>
+                                <h2>
                                     <xsl:value-of select="$doc_title" />
-                                </h1>
+                                </h2>
                                 <div>
                                     <a href="{$teiSource}">
                                         <i class="bi bi-download fs-2" title="Zum TEI/XML Dokument"
@@ -111,41 +108,36 @@
                                             title="Weiter zum nächsten Dokument"
                                             visually-hidden="true">
                                             <span class="visually-hidden">Weiter zum nächsten
-        Dokument</span>
+                                                Dokument</span>
                                         </i>
                                     </a>
                                 </xsl:if>
                             </div>
                         </div>
-                        <div class="main-text">
-                            <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                            <p style="text-align:center;">
+                        <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
+                        <p style="text-align:center;">
                             <xsl:for-each select=".//tei:note[not(./tei:p)]">
-                                    <div class="footnotes">
-                                        <xsl:element name="a">
-                                            <xsl:attribute name="name">
-                                                <xsl:text>fn</xsl:text>
-                                            <xsl:number level="any"
-                                                    format="1" count="tei:note" />
-                                            </xsl:attribute>
+                                <div class="footnotes">
+                                    <xsl:element name="a">
+                                        <xsl:attribute name="name">
+                                            <xsl:text>fn</xsl:text>
+                                            <xsl:number level="any" format="1" count="tei:note"/>
+                                        </xsl:attribute>
                                         <a>
-                                                <xsl:attribute name="href">
-                                                    <xsl:text>#fna_</xsl:text>
-                                                <xsl:number level="any"
-                                                        format="1" count="tei:note" />
-                                                </xsl:attribute>
-                                                <span
-                                                    style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
-                                                    <xsl:number level="any" format="1"
-                                                        count="tei:note" />
-                                                </span>
-                                            </a>
-                                        </xsl:element>
-                                        <xsl:apply-templates />
-                                    </div>
-                                </xsl:for-each>
+                                            <xsl:attribute name="href">
+                                                <xsl:text>#fna_</xsl:text>
+                                                <xsl:number level="any" format="1" count="tei:note"/>
+                                            </xsl:attribute>
+                                            <span style="font-size:7pt;vertical-align:super; margin-right: 0.4em">
+                                                <xsl:number level="any" format="1" count="tei:note"/>
+                                            </span>
+                                        </a>
+                                    </xsl:element>
+                                    <xsl:apply-templates/>
+                                </div>
+                            </xsl:for-each>
                         </p>
-                        </div>
+
                         <div class="text-center p-4">
                             <xsl:call-template name="blockquote">
                                 <xsl:with-param name="pageId" select="$link" />
