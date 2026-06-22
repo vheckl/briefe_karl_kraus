@@ -4,7 +4,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Brief an Karl Kraus</title>
+            <title>Brief von Vally Springer an Karl Kraus, 15. April 1902</title>
             <author key="gnd:1309366365" ref="http://d-nb.info/gnd/1309366365">Springer, Vally</author>
             <respStmt>
                <resp>Transkription und Kodierung</resp>
@@ -22,7 +22,7 @@
                </msIdentifier>
                <msContents>
                   <msItem>
-                     <title>Brief an Karl Kraus</title>
+                     <title>Brief von Vally Springer an Karl Kraus, 15. April 1902</title>
                      <author>Springer, Vally</author>
                      <note type="summary">Dank für ein Kraus-Bild mit Widmung</note>
                      <note type="incipit">Seit einigen Tagen schon wache ich mit der quälenden
@@ -115,56 +115,54 @@
                <dateline rend="right">Wien, 15. April 1902.</dateline>
                <salute>Sehr geehrter Herr,</salute>
             </opener>
-            <p rend="indent">
-               <lb n="1"/>Seit einigen Tagen schon
-               <lb n="2"/>wache ich mit der quälenden Ge
-               <lb n="3"/>wissensmahnung auf, daß ich Ihnen
-               <lb n="4"/>einen Dankbrief schulde. Mein
-               <lb n="5"/>Respekt vor Ihrem Geiste ist so groß,
-               <lb n="6"/>daß ich mich ganz verschüchtert
-               <lb n="7"/>fühle, während ich die Feder in
+            <p rend="indent">Seit einigen Tagen schon
+               <lb/>wache ich mit der quälenden Ge
+               <lb/>wissensmahnung auf, daß ich Ihnen
+               <lb/>einen Dankbrief schulde. Mein
+               <lb/>Respekt vor Ihrem Geiste ist so groß,
+               <lb/>daß ich mich ganz verschüchtert
+               <lb/>fühle, während ich die Feder in
             </p>
 
             <!-- SEITE 2 -->
             <pb facs="#surf-IMG_DEFAULT_5397127" n="2" />
             <p>
-               <lb n="1"/>die Hand nehme, um an Sie zu
-               <lb n="2"/>schreiben. Und da ich meine
-               <lb n="3"/>Scheu ja doch überwinden muss
-               <lb n="4"/>um Ihnen zu danken, so erlaube
-               <lb n="5"/>ich mir einige bescheidene Worte
-               <lb n="6"/>auf das zu erwidern, was Sie
-               <lb n="7"/>mir freundlich auf Ihr Bild
-               <lb n="8"/>geschrieben haben.
+               <lb/>die Hand nehme, um an Sie zu
+               <lb/>schreiben. Und da ich meine
+               <lb/>Scheu ja doch überwinden muss
+               <lb/>um Ihnen zu danken, so erlaube
+               <lb/>ich mir einige bescheidene Worte
+               <lb/>auf das zu erwidern, was Sie
+               <lb/>mir freundlich auf Ihr Bild
+               <lb/>geschrieben haben.
             </p>
-            <p rend="indent">
-               <lb n="9"/>Haben nicht Sie selbst am
-               <lb n="10"/>besten bewiesen, dass wir <unclear reason="illegible">keinen</unclear>
-               <lb n="11"/>Schopenhauer in diesem Punkte
-               <lb n="12"/>nicht mehr Recht geben? Gibt es
-               <lb n="13"/>nicht schon Tausende und Aber
-               <lb n="14"/>tausende, die Ihr Blatt stets mit
-               <lb n="15"/>Ungeduld erwarten und sich an
-               <lb n="16"/>Ihrem <unclear reason="illegible">Witze</unclear>, Ihrer Gerechtigkeits
-               <lb n="17"/>liebe aufrichtig erfreuen? Sie alle
-               <lb n="18"/>sehen kein "Verbrechen", keinen
-               <lb n="19"/>"empörenden Bruch der guten Sit
-               <lb n="20"/>ten und des Anstandes" darin, von
-               <lb n="21"/>Dummheit und Schlechtigkeit zu
-               <lb n="22"/>reden! — — Im Gegenteil!
+            <p rend="indent">Haben nicht Sie selbst am
+               <lb/>besten bewiesen, dass wir <unclear reason="illegible">keinen</unclear>
+               <lb/>Schopenhauer in diesem Punkte
+               <lb/>nicht mehr Recht geben? Gibt es
+               <lb/>nicht schon Tausende und Aber
+               <lb/>tausende, die Ihr Blatt stets mit
+               <lb/>Ungeduld erwarten und sich an
+               <lb/>Ihrem <unclear reason="illegible">Witze</unclear>, Ihrer Gerechtigkeits
+               <lb/>liebe aufrichtig erfreuen? Sie alle
+               <lb/>sehen kein "Verbrechen", keinen
+               <lb/>"empörenden Bruch der guten Sit
+               <lb/>ten und des Anstandes" darin, von
+               <lb/>Dummheit und Schlechtigkeit zu
+               <lb/>reden! — — Im Gegenteil!
             </p>
 
             <!-- SEITE 3 -->
             <pb facs="#surf-IMG_DEFAULT_5397128" n="3" />
             <p rend="indent">
-               <lb n="1"/>Als „Eine für Viele" gestatte
-               <lb n="2"/>ich mir, Ihnen das zu sagen, — —
-               <lb n="3"/>als ob Sie es nicht schon wüßten!! — —
-               <lb n="4"/>und ich danke Ihnen nochmals herzlich
-               <lb n="5"/>für Ihr Bild, das mir stets als Personi
-               <lb n="6"/>fication von Thatkraft und Überzeu
-               <lb n="7"/>gungstreue ein persönlicher <unclear reason="illegible">Ansporn</unclear>
-               <lb n="8"/>sein wird! —
+               <lb/>Als „Eine für Viele" gestatte
+               <lb/>ich mir, Ihnen das zu sagen, — —
+               <lb/>als ob Sie es nicht schon wüßten!! — —
+               <lb/>und ich danke Ihnen nochmals herzlich
+               <lb/>für Ihr Bild, das mir stets als Personi
+               <lb/>fication von Thatkraft und Überzeu
+               <lb/>gungstreue ein persönlicher <unclear reason="illegible">Ansporn</unclear>
+               <lb/>sein wird! —
             </p>
             <closer>
                <signed>

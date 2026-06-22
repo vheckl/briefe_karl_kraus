@@ -111,6 +111,9 @@
                             <div class="col-7 editions-text-col">
                                 <div class="editions-text-column">
                                     <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
+                                    <div class="editorial-note">
+                                        <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
+                                    </div>
                                     <p style="text-align:center;">
                                         <xsl:for-each select=".//tei:body//tei:note[not(./tei:p)]">
                                             <div class="footnotes">
