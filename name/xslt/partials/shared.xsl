@@ -422,4 +422,17 @@
         </span>
     </xsl:template>
 
+    <xsl:template match="tei:dateline">
+        <div>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="@rend='right'">dateline dateline-right</xsl:when>
+                    <xsl:when test="@rend='center'">dateline dateline-center</xsl:when>
+                    <xsl:otherwise>dateline</xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:apply-templates />
+        </div>
+    </xsl:template>
+
 </xsl:stylesheet>

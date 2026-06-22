@@ -4,7 +4,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title>Brief an Karl Kraus</title>
+            <title>Brief von Margarete Steckell an Karl Kraus, 4. November 1904</title>
             <author ref="http://d-nb.info/gnd/">Steckell, Margarete</author>
             <respStmt>
                <resp>Transkription und Kodierung</resp>
@@ -22,7 +22,7 @@
                </msIdentifier>
                <msContents>
                   <msItem>
-                     <title>Brief an Karl Kraus</title>
+                     <title>Brief von Margarete Steckell an Karl Kraus, 4. November 1904</title>
                      <author>Steckell, Margarete</author>
                      <note type="summary">Dank für Zusendung der Fackel Nr. 167</note>
                      <note type="incipit">Schelten Sie mich zum mindesten unhöflich</note>
@@ -117,66 +117,62 @@
                <fw type="letterhead" place="top-left" rend="monogram">
                   <unclear reason="illegible">MS</unclear>
                </fw>
-               <dateline rend="right">Berlin, den 4. Novb. 1904</dateline>
+               <dateline rend="center">Berlin, den 4. Novb. 1904</dateline>
                <salute type="initial">Sehr geehrter Herr Kraus</salute>
             </opener>
-            <p rend="indent">
-               <lb n="1"/>Schelten Sie mich zum
-               <lb n="2"/>mindesten unhöflich, dass ich noch
-               <lb n="3"/>nicht die Zeit gefunden habe Ihnen
-               <lb n="4"/>für Ihre liebenswürdige Uebersendung
-               <lb n="5"/>der „Fackel" zu danken, aber man
-               <lb n="6"/>hängt ja als Sklave des Lebens von
-               <lb n="7"/>so vielen Kleinigkeiten ab und
-               <lb n="8"/>nicht zu wenig von seiner eigenen
-               <lb n="9"/>Trägheit, denn Zeitmangel kann
+            <p rend="indent"><unclear reason="illegible">Schelten</unclear> Sie mich zum
+               <lb/>mindesten unhöflich, dass ich noch
+               <lb/>nicht die Zeit gefunden habe Ihnen
+               <lb/>für Ihre liebenswürdige Uebersendung
+               <lb/>der „Fackel" zu danken, aber man
+               <lb/>hängt ja als Sklave des Lebens von
+               <lb/>so vielen Kleinigkeiten ab und
+               <lb/>nicht zu wenig von seiner eigenen
+               <lb/>Trägheit, denn Zeitmangel kann
             </p>
 
             <!-- SEITE 2 -->
             <pb facs="#surf-IMG_DEFAULT_5429276" n="2" />
-            <note type="physDesc" place="left">Linke Seite der Doppelseite unbeschrieben;
-               Stempel der Wiener Stadt- u. Landesbibliothek.</note>
             <p>
-               <lb n="1"/>mich kaum entschuldigen, obwohl ich
-               <lb n="2"/>viel zu tun hatte. Heut nach dieser
-               <lb n="3"/>meiner offenen Abbitte erhalte ich
-               <lb n="4"/>gewiss auch die erbetene Absolution
-               <lb n="5"/>in Gestalt des nächst erscheinenden
-               <lb n="6"/>Heftes? –
+               <lb/>mich kaum entschuldigen, obwohl ich
+               <lb/>viel zu tun hatte. Heut nach dieser
+               <lb/>meiner offenen Abbitte erhalte ich
+               <lb/>gewiss auch die erbetene Absolution
+               <lb/>in Gestalt des nächst erscheinenden
+               <lb/>Heftes? –
             </p>
             <p>
-               <lb n="7"/>„Ist Harden noch immer beleidigt?"
-               <lb n="8"/>fragt jetzt eine Neugierige. Seinen Artikel
-               <lb n="9"/>über Südwestafrika finde ich sehr der
-               <lb n="10"/>allgemeinen Ansicht entsprechend. –
+               <lb/>„Ist Harden noch immer beleidigt?"
+               <lb/>fragt jetzt eine Neugierige. Seinen Artikel
+               <lb/>über Südwestafrika finde ich sehr der
+               <lb/>allgemeinen Ansicht entsprechend. –
             </p>
             <p>
-               <lb n="11"/>Frank Wedekinds „Lied vom armen Kind"
-               <lb n="12"/>hat mir sehr gefallen. Es liegt ein
+               <lb/>Frank Wedekinds „Lied vom armen Kind"
+               <lb/>hat mir sehr gefallen. Es liegt ein
             </p>
 
             <!-- SEITE 3 -->
             <pb facs="#surf-IMG_DEFAULT_5429277" n="3" />
-            <p>
-               <lb n="1"/><subst>
-                  <del rend="overwritten"><unclear reason="illegible">sa</unclear></del>
-                  <add place="over">sa</add>
-               </subst>tirischer Humor darin, der so fein
-               <lb n="2"/>und treffend unsere Zeit zeichnet.
+            <p>sat<subst>
+    <del rend="overwritten"><unclear reason="illegible">j</unclear></del>
+    <add place="over">i</add>
+</subst>rischer Humor darin, der so fein
+               <lb/>und treffend unsere Zeit zeichnet.
             </p>
             <p>
-               <lb n="3"/>Und nun noch eine Frage: Haben Sie nicht
-               <lb n="4"/>so manchen Strauss privatim anzufechten,
-               <lb n="5"/>mit denen, die Sie in Ihrer Schrift an
-               <lb n="6"/>greifen? Z.B. Herr <unclear reason="illegible">Granichstaedten</unclear> steckt doch
-               <lb n="7"/>nicht schweigend Ihre Kritik ein oder doch?
+               <lb/>Und nun noch eine Frage: Haben Sie nicht
+               <lb/>so manchen Strauss privatim anzufechten,
+               <lb/>mit denen, die Sie in Ihrer Schrift an
+               <lb/>greifen? Z.B. Herr <unclear reason="illegible">Granichstaedten</unclear> steckt doch
+               <lb/>nicht schweigend Ihre Kritik ein oder doch?
             </p>
             <p>
-               <lb n="8"/>Hoffentlich habe ich bald einmal wieder
-               <lb n="9"/>das Vergnügen Sie bei mir begrüssen
-               <lb n="10"/>zu können um die leider nur so kurze
-               <lb n="11"/>Bekanntschaft aufzufrischen. Bitte grüssen
-               <lb n="12"/>Sie <unclear reason="illegible">Luhr's</unclear> bestens.
+               <lb/>Hoffentlich habe ich bald einmal wieder
+               <lb/>das Vergnügen Sie bei mir begrüssen
+               <lb/>zu können um die leider nur so kurze
+               <lb/>Bekanntschaft aufzufrischen. Bitte grüssen
+               <lb/>Sie <unclear reason="illegible">Luhr's</unclear> bestens.
             </p>
             <closer>
                <salute type="closing">Mit nochmaligem Dank und bestem Gruss</salute>

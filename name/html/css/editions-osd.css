@@ -121,3 +121,8 @@
     padding-right: 6rem;
     margin-bottom: 3rem;
 }
+
+del {
+    text-decoration: line-through;
+    color: #999999;
+}

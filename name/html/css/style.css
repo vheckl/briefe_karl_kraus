@@ -232,3 +232,14 @@ abbr[title="unclear"] {
     padding: 0 2px;
     border-radius: 2px;
 }
+
+div.dateline-center {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+subst del {
+    text-decoration: line-through;
+    color: #999999;
+    font-size: 0.8rem;
+}
