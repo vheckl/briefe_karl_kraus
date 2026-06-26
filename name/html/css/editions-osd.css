@@ -2,9 +2,10 @@
 .editions-layout {
     align-items: flex-start;
     flex-wrap: nowrap;
+    gap: 2rem;
 }
 
-/* Die Viewer-Spalte bleibt beim Scrollen oben angeheftet. */
+/* Viewer-Spalte bleibt beim Scrollen oben angeheftet. */
 .editions-viewer-col {
     position: sticky;
     top: 0;
@@ -26,18 +27,53 @@
     overflow: hidden;
 }
 
+/* Textspalte rechts. */
 .editions-text-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
     overflow-wrap: anywhere;
 }
 
-/* Zusätzlicher Nachlauf, damit am Dokumentende noch sauber gescrollt werden kann. */
+/* Scroll-Nachlauf am Dokumentende. */
 .editions-text-column::after {
     content: "";
     display: block;
     height: var(--text-scroll-tail, 60vh);
 }
 
-/* kleine PB-Marker; diese Punkte werden vom IntersectionObserver beobachtet. */
+/* Letter body füllt die Textspalte. */
+.editions-text-column div.letter-body {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Rechtsbündige Elemente. */
+.editions-text-column div.dateline-right {
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+}
+
+.editions-text-column div.signed {
+    text-align: right;
+    width: 100%;
+    padding-right: 6rem;
+    margin-bottom: 3rem;
+}
+
+/* fw-Nummer rechtsbündig in der Textspalte. */
+.editions-text-column .fw.num {
+    text-align: right;
+}
+
+/* Citation-Block unten. */
+.editions-text-column .text-center.p-4 {
+    margin-top: auto;
+}
+
+/* ---------- PB-Marker (OSD) ---------- */
 .osd-marker {
     display: inline-block;
     width: 0.45rem;
@@ -49,13 +85,11 @@
     pointer-events: none;
 }
 
-/* Erzwungener Umbruch an PB-Stellen für bessere Lesbarkeit. */
 .pb-break {
     display: block;
     height: 0.65rem;
 }
 
-/* Sichtbares PB-Label im Text. */
 .pb {
     display: inline-block;
     margin: 0 0.35rem;
@@ -68,61 +102,28 @@
     background: #f1f3f5;
 }
 
-/* Hervorhebung des aktuell zum OSD-Bild passenden PB-Markers. */
+.pb.osd-marker {
+    font-size: 0;
+}
+
 .pb.is-active {
     color: #fff;
     border-color: #0d6efd;
     background: #0d6efd;
 }
 
+/* ---------- responsive ---------- */
 @media (max-width: 991.98px) {
-    /* Etwas geringere Viewer-Mindesthöhe auf kleineren Geräten. */
     .osd-viewer {
         height: 62vh;
         min-height: 16rem;
     }
 
-    /* Kompakterer PB-Abstand auf kleinen Viewports. */
     .pb-break {
         height: 0.5rem;
     }
 
-    /* Kürzerer Scroll-Nachlauf auf kleinen Viewports. */
     .editions-text-column::after {
         height: var(--text-scroll-tail-mobile, 48vh);
     }
-}
-
-.editions-text-column div.letter-body {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.editions-text-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.editions-text-column .text-center.p-4 {
-    margin-top: auto;
-}
-
-.editions-layout {
-    gap: 2rem;
-}
-
-.editions-text-column {
-    max-width: 400px;
-}
-
-.editions-text-column div.signed {
-    text-align: right;
-    padding-right: 6rem;
-    margin-bottom: 3rem;
-}
-
-del {
-    text-decoration: line-through;
-    color: #999999;
 }

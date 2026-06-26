@@ -2,67 +2,71 @@
     --bs-tertiary-bg-rgb: 255, 255, 150;
 }
 
-/* needed for interactive map in listplace.xsl */
+/* ---------- base / layout ---------- */
+body {
+    background-color: #eaeaea;
+}
+
 div#map {
     height: 50vh;
 }
 
-/* Match bootstrap navlink focus outline color. */
 :focus-visible {
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(13,110,253,.25);
+    box-shadow: 0 0 0 .25rem rgba(13, 110, 253, .25);
 }
 
-.entity {
-    text-decoration: underline dotted;
-    cursor: pointer;
+main h1 {
+    margin-top: 3rem;
 }
 
+main h2 {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    margin-top: 3rem;
+}
+
+/* ---------- navbar ---------- */
 a.nav-link {
     font-size: 1.1rem;
     font-weight: bold;
     color: rgb(31, 31, 31);
 }
 
-div.closer {
-    margin-top: 1rem; 
-    font-style: italic;
-}
-
-div.closer {
-    font-style: italic;
-}
-
-body {
-    background-color: #eaeaea; 
-}
-
-main h1 {
-    margin-top: 3rem;
-} 
-
-main h2 {
-    margin-bottom: 2rem;
-}
-
-.home-container > p {
-    max-width: 600px;
-}
-
+/* ---------- homepage ---------- */
 .home-container {
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
+.home-container > p {
+    max-width: 600px;
+}
+
+.home-container h1 {
+    margin-bottom: 0;
+}
+
+.home-container h2 {
+    margin-top: 0.2rem;
+}
+
 .home-container .text-center.p-4 {
     margin-top: auto;
 }
 
+/* ---------- meta / about page ---------- */
 .meta-container {
     display: flex;
     flex-direction: column;
     min-height: 80vh;
+}
+
+.meta-container > p {
+    max-width: 600px;
 }
 
 .meta-container .text-center.p-4 {
@@ -72,10 +76,7 @@ main h2 {
     justify-content: center;
 }
 
-.meta-container > p {
-    max-width: 600px;
-}
-
+/* ---------- citation blockquote ---------- */
 .blockquote {
     text-align: center;
     margin-left: auto;
@@ -90,19 +91,13 @@ main h2 {
     text-align: center;
 }
 
-.home-container h1 {
-    margin-bottom: 0;
+/* ---------- entities ---------- */
+.entity {
+    text-decoration: underline dotted;
+    cursor: pointer;
 }
 
-.home-container h2 {
-    margin-top: 0.2rem;
-}
-
-h2 {
-    margin-top: 3rem;
-}
-
-/* opener and closer */
+/* ---------- letter: opener / closer / salute / signed / dateline ---------- */
 div.opener {
     margin-bottom: 0.5rem;
     font-style: italic;
@@ -121,40 +116,6 @@ div.closer {
 div.signed {
     margin-top: 0.5rem;
     font-weight: bold;
-}
-
-/* underlined signature */
-span.underline {
-    text-decoration: underline;
-}
-
-/* archive shelfmarks - visually de-emphasised */
-span.fw {
-    color: #999999;
-    font-size: 0.8rem;
-    display: block;
-}
-
-p.indent {
-    text-indent: 2em;
-}
-
-
-div.footnotes {
-    max-width: 450px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    font-size: 0.85rem;
-    color: #666666;
-    margin-top: 0.3rem;
-}
-
-div.closer div.salute {
-    text-indent: 2em;
-}
-
-div.signed {
     text-align: right;
 }
 
@@ -168,49 +129,63 @@ div.dateline-right {
     font-style: italic;
 }
 
+div.dateline-center {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* indented closing salute ("Ihre") */
+div.closer div.salute {
+    text-indent: 3em;
+}
+
+div.closer div.salute + div.salute {
+    text-align: right;
+    padding-right: 10rem;
+}
+
+/* ---------- signature underline ---------- */
+span.underline {
+    text-decoration: underline;
+}
+
+/* ---------- paragraphs ---------- */
+p.indent {
+    text-indent: 2em;
+}
+
+/* ---------- archival fw (shelfmark / number / letterhead) ---------- */
+span.fw {
+    color: #999999;
+    font-size: 0.8rem;
+}
+
+span.fw.shelfmark {
+    display: inline;
+}
+
 span.fw.num {
-    display: block;
+    display: inline;
+    float: right;
     text-align: right;
 }
 
-.pb.osd-marker {
-    font-size: 0;
+span.fw.letterhead {
+    display: none;
 }
 
-.editions-text-column div.signed,
-.editions-text-column div.dateline-right {
-    padding-right: 0;
-    text-align: right;
+/* ---------- footnotes ---------- */
+div.footnotes {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #666666;
+    margin-top: 0.3rem;
 }
 
-.editions-text-column .dateline-right {
-    text-align: right;
-    width: 100%;
-}
-
-.editions-text-column .signed {
-    text-align: right;
-    width: 100%;
-}
-
-.editions-text-column .fw.num {
-    text-align: right;
-    width: 100%;
-    display: block;
-}
-
-.editions-text-column div.letter-body {
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-}
-
-.editions-text-column div.signed, .editions-text-column div.dateline-right {
-    padding-right: 0;
-    text-align: right;
-    margin-bottom: 2rem;
-}
-
+/* ---------- unclear readings ---------- */
 abbr[title="unclear"] {
     text-decoration: none;
     background-color: #fff3cd;
@@ -219,6 +194,16 @@ abbr[title="unclear"] {
     cursor: help;
 }
 
+/* ---------- substitution / deletion ---------- */
+.subst abbr {
+    background-color: transparent;
+}
+
+span.del {
+    color: #999999;
+}
+
+/* ---------- editorial legend ---------- */
 .editorial-note {
     font-size: 0.8rem;
     color: #666666;
@@ -233,13 +218,22 @@ abbr[title="unclear"] {
     border-radius: 2px;
 }
 
-div.dateline-center {
-    text-align: center;
-    margin-bottom: 1rem;
+/* ---------- page-fold marker (Springer double page) ---------- */
+span.pb.osd-marker.pb-fold,
+span.pb.osd-marker.pb-fold.is-active {
+    display: inline;
+    width: auto;
+    height: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    border-radius: 0;
+    color: #bbb;
+    font-size: 0.75rem;
 }
 
-subst del {
-    text-decoration: line-through;
-    color: #999999;
-    font-size: 0.8rem;
+span.pb.osd-marker.pb-fold::before {
+    content: "|";
+    vertical-align: super;
+    margin: 0 0.15rem;
 }

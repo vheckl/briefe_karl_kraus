@@ -113,6 +113,7 @@
                                     <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
                                     <div class="editorial-note">
                                         <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
+                                        <p>[j] = überschriebener Buchstabe</p>
                                     </div>
                                     <p style="text-align:center;">
                                         <xsl:for-each select=".//tei:body//tei:note[not(./tei:p)]">
@@ -160,24 +161,28 @@
         </html>
     </xsl:template>
 
-    <!-- PB template with surface-based image lookup -->
     <xsl:template match="tei:pb">
         <xsl:variable name="gid" select="replace(@facs, '^#', '')" />
         <xsl:variable name="image_url"
             select="string(/tei:TEI/tei:facsimile/tei:surface[@xml:id = $gid]/tei:graphic/@url)" />
+        <xsl:variable name="foldClass" select="if (parent::tei:p) then ' pb-fold' else ''" />
         <xsl:choose>
             <xsl:when test="normalize-space($image_url)">
-                <span class="pb osd-marker" source="{$gid}" data-osd-facs="{$gid}"
+                <span class="pb osd-marker{$foldClass}" source="{$gid}" data-osd-facs="{$gid}"
                     data-osd-image="{$image_url}">
                     <xsl:value-of select="./@n" />
                 </span>
-                <br class="pb-break" />
+                <xsl:if test="not(parent::tei:p)">
+                    <br class="pb-break" />
+                </xsl:if>
             </xsl:when>
             <xsl:otherwise>
-                <span class="pb" source="{$gid}">
+                <span class="pb{$foldClass}" source="{$gid}">
                     <xsl:value-of select="./@n" />
                 </span>
-                <br class="pb-break" />
+                <xsl:if test="not(parent::tei:p)">
+                    <br class="pb-break" />
+                </xsl:if>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
