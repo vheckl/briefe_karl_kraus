@@ -1,5 +1,5 @@
 :root {
-    --bs-tertiary-bg-rgb: 255, 255, 150;
+    --bs-tertiary-bg-rgb: 255, 255, 170;
 }
 
 /* ---------- base / layout ---------- */
@@ -21,6 +21,7 @@ main h1 {
 }
 
 main h2 {
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -189,7 +190,7 @@ div.footnotes {
 /* ---------- unclear readings ---------- */
 abbr[title="unclear"] {
     text-decoration: none;
-    background-color: #fff3cd;
+    background-color: #FFFFE1;
     padding: 0 2px;
     border-radius: 2px;
     cursor: help;
@@ -214,7 +215,7 @@ span.del {
 }
 
 .unclear-example {
-    background-color: #fff3cd;
+    background-color: #FFFFE1;
     padding: 0 2px;
     border-radius: 2px;
 }
@@ -283,4 +284,33 @@ span.pb.osd-marker.pb-fold::before {
 [data-letter="5429274"] .letter-body p {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.home-container h1 {
+    cursor: default;
+}
+
+.home-container h1:hover {
+    font-style: italic;
+}
+
+.home-container h2 {
+    cursor: default;
+}
+
+.home-container h2:hover {
+    font-style: italic;
+}
+
+h2 {
+    cursor: default;
+}
+
+h2:hover {
+    font-style: italic;
+}
+
+h2.edition-title {
+    margin-top: 6rem;
+    margin-bottom: 5rem;
 }

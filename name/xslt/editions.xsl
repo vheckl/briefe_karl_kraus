@@ -69,7 +69,7 @@
                                 </xsl:if>
                             </div>
                             <div class="col-md-8 col-lg-8 col-sm-12 text-center">
-                                <h2>
+                                <h2 class="edition-title">
                                     <xsl:value-of select="$doc_title" />
                                 </h2>
                                 <div>
