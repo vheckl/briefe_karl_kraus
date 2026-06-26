@@ -138,12 +138,12 @@ div.dateline-center {
 
 /* indented closing salute ("Ihre") */
 div.closer div.salute {
-    text-indent: 3em;
+    text-indent: 2em;
 }
 
 div.closer div.salute + div.salute {
     text-align: right;
-    padding-right: 10rem;
+    padding-right: 13rem;
 }
 
 /* ---------- signature underline ---------- */
@@ -263,22 +263,24 @@ span.pb.osd-marker.pb-fold::before {
 [data-letter="3524824"] div.closer div.signed { margin-top: 0.5rem; }
 [data-letter="3524824"] div.closer div.dateline { margin-top: 1rem; }
 
-/* Steckell — tighten opener internals */
+/* Steckell — opener internals */
 [data-letter="5429274"] div.opener div.dateline-center {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 [data-letter="5429274"] div.opener div.salute {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
 }
 
-/* Steckell — tighten closer internals */
+/* Steckell —  closer internals */
 [data-letter="5429274"] div.closer div.salute {
     margin-bottom: 0.2rem;
 }
 
 [data-letter="5429274"] div.closer div.signed {
     margin-top: 0.2rem;
+    text-align: right;
+    padding-right: 10rem;
 }
 
 [data-letter="5429274"] .letter-body p {
@@ -294,13 +296,6 @@ span.pb.osd-marker.pb-fold::before {
     font-style: italic;
 }
 
-.home-container h2 {
-    cursor: default;
-}
-
-.home-container h2:hover {
-    font-style: italic;
-}
 
 h2 {
     cursor: default;
@@ -313,4 +308,9 @@ h2:hover {
 h2.edition-title {
     margin-top: 6rem;
     margin-bottom: 5rem;
+}
+
+[data-letter="5429274"] div.closer div.salute:first-of-type {
+    text-indent: 0;
+    text-align: left;
 }
