@@ -109,12 +109,20 @@
                             </div>
                             <!-- Right column: TEI text with PB markers -->
                             <div class="col-7 editions-text-col">
-                                <div class="editions-text-column">
+                                <div class="editions-text-column"
+                                    data-letter="{.//tei:idno[@type='objid']}">
                                     <xsl:apply-templates select=".//tei:body"></xsl:apply-templates>
-                                    <div class="editorial-note">
-                                        <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
-                                        <p>[j] = überschriebener Buchstabe</p>
-                                    </div>
+                                    <xsl:if
+                                        test=".//tei:body//tei:unclear or .//tei:body//tei:subst">
+                                        <div class="editorial-note">
+                                            <xsl:if test=".//tei:body//tei:unclear">
+                                                <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
+                                            </xsl:if>
+                                            <xsl:if test=".//tei:body//tei:subst">
+                                                <p>[j] = überschriebener Buchstabe</p>
+                                            </xsl:if>
+                                        </div>
+                                    </xsl:if>
                                     <p style="text-align:center;">
                                         <xsl:for-each select=".//tei:body//tei:note[not(./tei:p)]">
                                             <div class="footnotes">

@@ -127,3 +127,7 @@
         height: var(--text-scroll-tail-mobile, 48vh);
     }
 }
+
+.editions-text-column {
+    max-width: 440px;
+}

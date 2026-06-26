@@ -105,7 +105,7 @@ div.opener {
 
 div.salute {
     font-weight: bold;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 div.closer {
@@ -122,6 +122,7 @@ div.signed {
 div.dateline {
     text-align: left;
     font-style: italic;
+    margin-bottom: 3rem;
 }
 
 div.dateline-right {
@@ -236,4 +237,50 @@ span.pb.osd-marker.pb-fold::before {
     content: "|";
     vertical-align: super;
     margin: 0 0.15rem;
+}
+
+.editions-text-column {
+    font-family: 'Lora', Georgia, serif;
+    line-height: 1.65;
+}
+
+/* Cleve */
+[data-letter="3524824"] div.opener { margin-bottom: 0.5rem; }
+[data-letter="3524824"] div.closer { margin-top: 1rem; }
+[data-letter="3524824"] div.salute { margin-bottom: 1rem; }
+
+/* Springer */
+[data-letter="5397125"] div.opener { margin-bottom: 1.5rem; }
+[data-letter="5397125"] div.closer { margin-top: 2rem; }
+
+/* Cleve — spacing INSIDE the opener */
+[data-letter="3524824"] div.opener div.dateline { margin-bottom: 1rem; }
+[data-letter="3524824"] div.opener div.salute { margin-top: 0; }
+
+/* Cleve — spacing INSIDE the closer */
+[data-letter="3524824"] div.closer div.salute { margin-bottom: 0.5rem; }
+[data-letter="3524824"] div.closer div.signed { margin-top: 0.5rem; }
+[data-letter="3524824"] div.closer div.dateline { margin-top: 1rem; }
+
+/* Steckell — tighten opener internals */
+[data-letter="5429274"] div.opener div.dateline-center {
+    margin-bottom: 1rem;
+}
+
+[data-letter="5429274"] div.opener div.salute {
+    margin-bottom: 0.4rem;
+}
+
+/* Steckell — tighten closer internals */
+[data-letter="5429274"] div.closer div.salute {
+    margin-bottom: 0.2rem;
+}
+
+[data-letter="5429274"] div.closer div.signed {
+    margin-top: 0.2rem;
+}
+
+[data-letter="5429274"] .letter-body p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
