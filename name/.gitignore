@@ -1,5 +1,5 @@
 # project specific
-*.html
+# *.html
 html/*.xml
 html/beacon.txt
 /html/oai-pmh
