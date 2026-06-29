@@ -13,12 +13,6 @@
             <xsl:apply-templates />
         </div>
     </xsl:template>
-    <xsl:template match="tei:pb">
-        <span class="anchor-pb"></span>
-        <span class="pb" source="{@facs}">
-            <xsl:value-of select="./@n" />
-        </span>
-    </xsl:template>
     <xsl:template match="tei:unclear">
         <abbr title="unclear">
             <xsl:apply-templates />
@@ -422,6 +416,28 @@
         </span>
     </xsl:template>
 
-    <xsl:template match="tei:pb" />
+    <xsl:template match="tei:dateline">
+        <div>
+            <xsl:attribute name="class">
+                <xsl:choose>
+                    <xsl:when test="@rend='right'">dateline dateline-right</xsl:when>
+                    <xsl:when test="@rend='center'">dateline dateline-center</xsl:when>
+                    <xsl:otherwise>dateline</xsl:otherwise>
+                </xsl:choose>
+            </xsl:attribute>
+            <xsl:apply-templates />
+        </div>
+    </xsl:template>
+
+    <xsl:template match="tei:subst">
+        <span class="subst">[<xsl:apply-templates select="tei:del" />]<xsl:apply-templates
+                select="tei:add" /></span>
+    </xsl:template>
+
+    <xsl:template match="tei:del">
+        <span class="del">
+            <xsl:apply-templates />
+        </span>
+    </xsl:template>
 
 </xsl:stylesheet>

@@ -1,0 +1,133 @@
+/* Editionsseite: Text und Faksimile-Viewer nebeneinander. */
+.editions-layout {
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    gap: 2rem;
+}
+
+/* Viewer-Spalte bleibt beim Scrollen oben angeheftet. */
+.editions-viewer-col {
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+}
+
+.osd-column {
+    position: static;
+}
+
+/* Sichtbarer OSD-Container links. */
+.osd-viewer {
+    width: 100%;
+    height: min(78vh, 62rem);
+    min-height: 24rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.4rem;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+/* Textspalte rechts. */
+.editions-text-column {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    overflow-wrap: anywhere;
+}
+
+/* Scroll-Nachlauf am Dokumentende. */
+.editions-text-column::after {
+    content: "";
+    display: block;
+    height: var(--text-scroll-tail, 60vh);
+}
+
+/* Letter body füllt die Textspalte. */
+.editions-text-column div.letter-body {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Rechtsbündige Elemente. */
+.editions-text-column div.dateline-right {
+    text-align: right;
+    width: 100%;
+    padding-right: 0;
+}
+
+.editions-text-column div.signed {
+    text-align: right;
+    width: 100%;
+    padding-right: 6rem;
+    margin-bottom: 3rem;
+}
+
+/* fw-Nummer rechtsbündig in der Textspalte. */
+.editions-text-column .fw.num {
+    text-align: right;
+}
+
+/* Citation-Block unten. */
+.editions-text-column .text-center.p-4 {
+    margin-top: auto;
+}
+
+/* ---------- PB-Marker (OSD) ---------- */
+.osd-marker {
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin: 0 0.25rem 0 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    pointer-events: none;
+}
+
+.pb-break {
+    display: block;
+    height: 0.65rem;
+}
+
+.pb {
+    display: inline-block;
+    margin: 0 0.35rem;
+    padding: 0.05rem 0.4rem;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    border-radius: 0.3rem;
+    border: 1px solid #adb5bd;
+    color: #495057;
+    background: #f1f3f5;
+}
+
+.pb.osd-marker {
+    font-size: 0;
+}
+
+.pb.is-active {
+    color: #fff;
+    border-color: #0d6efd;
+    background: #0d6efd;
+}
+
+/* ---------- responsive ---------- */
+@media (max-width: 991.98px) {
+    .osd-viewer {
+        height: 62vh;
+        min-height: 16rem;
+    }
+
+    .pb-break {
+        height: 0.5rem;
+    }
+
+    .editions-text-column::after {
+        height: var(--text-scroll-tail-mobile, 48vh);
+    }
+}
+
+.editions-text-column {
+    max-width: 440px;
+}

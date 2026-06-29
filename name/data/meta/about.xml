@@ -1,0 +1,25 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title type="main">Über das Projekt</title>
+            <title type="sub">{{cookiecutter.project_title}}</title>
+         </titleStmt>
+         <publicationStmt>
+            <p>Publication Information</p>
+         </publicationStmt>
+         <sourceDesc>
+            <p>Information about the source</p>
+         </sourceDesc>
+      </fileDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <p>
+         Diese digitale Edition entstand im Rahmen des Kurses „Aus dem Archiv ins Frontend" an der Universität Wien und wurde von Veronika Heckl erstellt.
+         Die Edition umfasst drei handschriftliche Briefe aus dem Bestand der Wienbibliothek im Rathaus, die als Teil der umfangreichen Karl-Kraus-Sammlung digitalisiert wurden. Die Briefe stammen von drei Verfasserinnen: Vally Springer (1902), Margarete Steckell (1904) und Henriette von Cleve (1934). 
+           </p>
+      </body>
+   </text>
+</TEI>
+  
