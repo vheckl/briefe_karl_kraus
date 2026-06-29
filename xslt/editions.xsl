@@ -72,14 +72,27 @@
                                 <h2 class="edition-title">
                                     <xsl:value-of select="$doc_title" />
                                 </h2>
-                                <div>
-                                    <a href="{$teiSource}">
-                                        <i class="bi bi-download fs-2" title="Zum TEI/XML Dokument"
-                                            visually-hidden="true">
-                                            <span class="visually-hidden">Zum TEI/XML Dokument</span>
-                                        </i>
-                                    </a>
-                                </div>
+                                <details class="letter-meta-details">
+                                    <summary><span class="meta-label">Metadaten</span><i class="bi bi-chevron-down meta-chevron"></i></summary>
+                                <dl class="letter-meta">
+                                    <dt>Verfasserin</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:titleStmt/tei:author)"/></dd>
+                                    <dt>Ort und Datum</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:history//tei:origPlace)"/><xsl:text>, </xsl:text><xsl:value-of select="normalize-space(.//tei:history//tei:origDate)"/></dd>
+                                    <dt>Aufbewahrungsort</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:msIdentifier/tei:repository)"/></dd>
+                                    <dt>Signatur</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:msIdentifier/tei:idno)"/></dd>
+                                    <dt>Material</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:support)"/></dd>
+                                    <dt>Umfang</dt>
+                                    <dd><xsl:value-of select="normalize-space(.//tei:extent)"/></dd>
+                                    <xsl:if test=".//tei:dimensions">
+                                        <dt>Maße</dt>
+                                        <dd><xsl:for-each select=".//tei:dimensions"><xsl:if test="position() gt 1"><xsl:text> · </xsl:text></xsl:if><xsl:value-of select="translate(tei:height,'.',',')"/><xsl:text> × </xsl:text><xsl:value-of select="translate(tei:width,'.',',')"/><xsl:text> cm</xsl:text></xsl:for-each></dd>
+                                    </xsl:if>
+                                </dl>
+                                </details>
                             </div>
                             <div class="col-md-2 col-lg-2 col-sm-12 text-end">
                                 <xsl:if test="ends-with($next, '.html')">

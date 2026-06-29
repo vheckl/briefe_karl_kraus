@@ -45,6 +45,9 @@
                      <handNote xml:id="h1" medium="ink" script="Latn">
                         <p>Lateinische Schreibschrift, Tinte.</p>
                      </handNote>
+                     <handNote xml:id="h2" medium="pencil">
+                        <p>Archivische Zählung, Bleistift.</p>
+                     </handNote>
                   </handDesc>
                </physDesc>
                <history>
@@ -100,8 +103,8 @@
       <body>
          <div type="letter">
             <pb facs="#surf-IMG_DEFAULT_3924219" n="1" />
-            <fw type="shelfmark" place="top-left">H.I.N. 238.928</fw>
-            <fw type="num" place="top-right" rend="red">11</fw>
+            <fw type="shelfmark" place="top-left" hand="#h2">H.I.N. 238.928</fw>
+            <fw type="num" place="top-right" rend="red" hand="#h2">11</fw>
             <opener>
                <dateline rend="right">18. VII. Juli 34.</dateline>
                <salute type="initial">Verehrter, lieber Herr Kraus,</salute>

@@ -32,7 +32,8 @@
                   <objectDesc>
                      <supportDesc>
                         <support>Papier</support>
-                        <extent>2 Blatt, 3 Seiten beschrieben.</extent>
+                        <extent>1 Blatt (Bifolium), gefaltet, 4 Seiten beschrieben.</extent>
+                        <dimensions type="leaf" unit="cm"><height>18</height><width>14.5</width></dimensions>
                         <condition>
                            <p>Blatt 1 (14,5 x 18 cm): Dunkle Reste eines Klebestreifens am 
                            linken Rand mittig.</p>
@@ -47,6 +48,9 @@
                   <handDesc>
                      <handNote xml:id="h1" medium="ink" script="Latn">
                         <p>Lateinische Schreibschrift, Tinte.</p>
+                     </handNote>
+                     <handNote xml:id="h2" medium="pencil">
+                        <p>Archivische Zählung, Bleistift.</p>
                      </handNote>
                   </handDesc>
                   <additions>
@@ -114,8 +118,8 @@
 
             <!-- SEITE 1 -->
             <pb facs="#surf-IMG_DEFAULT_5429275" n="1" />
-            <fw type="shelfmark" place="top-left">H.I.N 258.884</fw>
-            <fw type="num" place="top-right">15</fw>
+            <fw type="shelfmark" place="top-left" hand="#h2">H.I.N 258.884</fw>
+            <fw type="num" place="top-right" hand="#h2">15</fw>
             <opener>
                <fw type="letterhead" place="top-left" rend="monogram">MS</fw>
                <dateline rend="center">Berlin, den 4. Novb. 1904</dateline>
