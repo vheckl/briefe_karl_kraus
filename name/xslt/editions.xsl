@@ -119,7 +119,7 @@
                                                 <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
                                             </xsl:if>
                                             <xsl:if test=".//tei:body//tei:subst">
-                                                <p>[j] = überschriebener Buchstabe</p>
+                                                <p>[y] = überschriebener Buchstabe</p>
                                             </xsl:if>
                                         </div>
                                     </xsl:if>
