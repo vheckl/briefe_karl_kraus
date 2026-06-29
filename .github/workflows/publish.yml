@@ -1,0 +1,38 @@
+name: build and publish
+
+on: 
+  # wird ausgeführt, wenn ein Commit gepusht wird
+  push:
+  # ist über die GitHub Actions Oberfläche manuell auslösbar
+  workflow_dispatch:
+
+jobs:
+  build_pages:
+    name: Publish Edition as GitHub Pages Website
+    runs-on: ubuntu-latest
+    env:
+      ANT_OPTS: -Xmx5g
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+    steps:
+    - name: Perform Checkout
+      # holt Daten/Code aus dem Repository, damit in den nächsten Schritten darauf zugegriffen werden kann
+      uses: actions/checkout@v6
+    - name: build
+      # baut die HTML-Dateien aus XML
+      run: ant
+    - name: prepariere daten für publishing
+      # erzeugt quasi eine zip-Datei, die dann von der nächsten Action entpackt wird
+      uses: actions/upload-pages-artifact@v5
+      with:
+        path: "./html"
+    - name: veröffentliche auf GitHub Pages
+      # publiziert die zip-Datei, die von der vorherigen Action erzeugt wurde, auf GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v5
+      with:
+        token: ${{secrets.GITHUB_TOKEN}}
