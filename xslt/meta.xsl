@@ -70,7 +70,7 @@
         <br />
     </xsl:template>
     <xsl:template match="tei:unclear">
-        <span class="unclear">
+        <span class="unclear" title="unclear">
             <xsl:apply-templates />
             </span>
     </xsl:template>
