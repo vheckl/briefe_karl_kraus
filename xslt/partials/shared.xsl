@@ -14,9 +14,9 @@
         </div>
     </xsl:template>
     <xsl:template match="tei:unclear">
-        <abbr title="unclear">
+        <span class="unclear">
             <xsl:apply-templates />
-        </abbr>
+            </span>
     </xsl:template>
     <xsl:template match="tei:del">
         <del>

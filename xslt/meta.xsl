@@ -35,7 +35,6 @@
                     <xsl:with-param name="zoteroTitle" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
                 <!-- add the name of the author of the current article -->
-                <meta name="citation_author" content="Foo, Bar" />
             </head>
 
             <body class="d-flex flex-column h-100">
@@ -71,9 +70,9 @@
         <br />
     </xsl:template>
     <xsl:template match="tei:unclear">
-        <abbr title="unclear">
+        <span class="unclear">
             <xsl:apply-templates />
-        </abbr>
+            </span>
     </xsl:template>
     <xsl:template match="tei:del">
         <del>

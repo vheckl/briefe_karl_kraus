@@ -6,7 +6,7 @@
     <xsl:template name="blockquote">
         <xsl:param name="pageId" select="''"></xsl:param>
         <xsl:param name="customUrl" select="$base_url"></xsl:param>
-        <xsl:variable name="fullUrl" select="concat($customUrl, $pageId)" />
+        <xsl:variable name="fullUrl" select="'https://github.com/vheckl/briefe_karl_kraus'" />
         <div>
             <blockquote class="blockquote">
                 <p>

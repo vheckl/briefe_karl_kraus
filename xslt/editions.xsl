@@ -45,8 +45,6 @@
                     <xsl:with-param name="pageId" select="$link"></xsl:with-param>
                     <xsl:with-param name="zoteroTitle" select="$doc_title"></xsl:with-param>
                 </xsl:call-template>
-                <meta name="citation_author" content="Foo, Bar" />
-                <meta name="citation_author" content="Bar, Foo" />
             </head>
             <body class="d-flex flex-column h-100">
                 <xsl:call-template name="nav_bar" />
@@ -129,7 +127,7 @@
                                         test=".//tei:body//tei:unclear or .//tei:body//tei:subst">
                                         <div class="editorial-note">
                                             <xsl:if test=".//tei:body//tei:unclear">
-                                                <p><span class="unclear-example">Wort</span> = unsichere Lesart</p>
+                                                <p><span class="unclear">Wort</span> = unsichere Lesart</p>
                                             </xsl:if>
                                             <xsl:if test=".//tei:body//tei:subst">
                                                 <p>[y] = überschriebener Buchstabe</p>
