@@ -131,3 +131,20 @@
 .editions-text-column {
     max-width: 440px;
 }
+
+/* ---------- symmetric page-break gaps ---------- */
+.pb.osd-marker:not(.pb-fold) {
+    display: block;
+    width: fit-content;
+    margin: 1rem 0;
+}
+.pb-break {
+    display: none;
+}
+.pb-break + p,
+.pb-break + p.indent {
+    margin-top: 0;
+}
+p:has(+ .pb.osd-marker:not(.pb-fold)) {
+    margin-bottom: 0;
+}
