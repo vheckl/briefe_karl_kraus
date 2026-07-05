@@ -101,34 +101,28 @@ a.nav-link {
 /* ---------- letter: opener / closer / salute / signed / dateline ---------- */
 div.opener {
     margin-bottom: 0.5rem;
-    font-style: italic;
 }
 
 div.salute {
-    font-weight: bold;
     margin-bottom: 2rem;
 }
 
 div.closer {
     margin-top: 1rem;
-    font-style: italic;
 }
 
 div.signed {
     margin-top: 0.5rem;
-    font-weight: bold;
     text-align: right;
 }
 
 div.dateline {
     text-align: left;
-    font-style: italic;
     margin-bottom: 3rem;
 }
 
 div.dateline-right {
     text-align: right;
-    font-style: italic;
 }
 
 div.dateline-center {
@@ -154,6 +148,7 @@ span.underline {
 /* ---------- paragraphs ---------- */
 p.indent {
     text-indent: 2em;
+    margin-top: 1rem;
 }
 
 /* ---------- archival fw (shelfmark / number / letterhead) ---------- */
