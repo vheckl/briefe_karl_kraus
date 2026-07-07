@@ -37,6 +37,7 @@
         </span>
     </xsl:template>
     <xsl:template match="tei:lb">
+        <xsl:if test="@break = 'no'">-</xsl:if>
         <br />
     </xsl:template>
 
